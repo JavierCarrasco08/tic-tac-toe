@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 100%;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+:root {
+  --primary-color-background: #22223b;
+  --primary-color-cells: #4a4e69;
+  --primary-color-text: #f2e9e4;
+}
