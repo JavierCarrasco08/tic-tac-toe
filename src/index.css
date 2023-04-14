@@ -4,9 +4,6 @@ html {
   height: 100%;
   font-family: "Roboto", sans-serif;
 }
-body {
-  height: 100%;
-}
 *,
 *::after,
 *::before {
@@ -18,4 +15,15 @@ body {
   --primary-color-background: #22223b;
   --primary-color-cells: #4a4e69;
   --primary-color-text: #f2e9e4;
+}
+body {
+  height: 100%;
+  background-color: var(--primary-color-background);
+}
+#root {
+  max-width: 1500px;
+  height: 100%;
+  background-color: transparent;
+  margin-right: auto;
+  margin-left: auto;
 }
