@@ -1,0 +1,28 @@
+.panel {
+  width: 80%;
+  margin: auto;
+  padding: 0.25rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--primary-color-cells);
+  color: var(--primary-color-text);
+  border: thin solid var(--primary-color-text);
+}
+.panel__message {
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.panel__restart {
+  padding: 0.7rem 2.5rem;
+  border: none;
+  font-weight: 600;
+  background-color: var(--primary-color-background);
+  color: var(--primary-color-text);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: thin solid var(--primary-color-text);
+}
