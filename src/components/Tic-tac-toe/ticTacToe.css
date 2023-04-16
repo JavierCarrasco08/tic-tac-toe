@@ -1,45 +1,68 @@
 .tic-tac-toe {
-  height: 45vh;
+  height: 40vh;
   width: 80%;
   border-collapse: collapse;
   border-spacing: none;
+  font-size: 2.5rem;
 }
 .tic-tac-toe__td--top,
 .tic-tac-toe__td--center,
 .tic-tac-toe__td--bottom {
-  font-size: 2.5rem;
   text-align: center;
   height: 30%;
   width: 30%;
 }
 .tic-tac-toe__top .tic-tac-toe__td--top:nth-child(1) {
-  border-right: thin solid var(--primary-color-text);
-  border-bottom: thin solid var(--primary-color-text);
+  border-right: medium solid var(--primary-color-text);
+  border-bottom: medium solid var(--primary-color-text);
 }
 .tic-tac-toe__top .tic-tac-toe__td--top:nth-child(2) {
-  border-right: thin solid var(--primary-color-text);
-  border-bottom: thin solid var(--primary-color-text);
+  border-right: medium solid var(--primary-color-text);
+  border-bottom: medium solid var(--primary-color-text);
 }
 .tic-tac-toe__top .tic-tac-toe__td--top:nth-child(3) {
-  border-bottom: thin solid var(--primary-color-text);
+  border-bottom: medium solid var(--primary-color-text);
 }
 .tic-tac-toe__center .tic-tac-toe__td--center:nth-child(1) {
-  border-right: thin solid var(--primary-color-text);
-  border-bottom: thin solid var(--primary-color-text);
+  border-right: medium solid var(--primary-color-text);
+  border-bottom: medium solid var(--primary-color-text);
 }
 .tic-tac-toe__center .tic-tac-toe__td--center:nth-child(2) {
-  border-right: thin solid var(--primary-color-text);
-  border-bottom: thin solid var(--primary-color-text);
+  border-right: medium solid var(--primary-color-text);
+  border-bottom: medium solid var(--primary-color-text);
 }
 .tic-tac-toe__center .tic-tac-toe__td--center:nth-child(3) {
-  border-bottom: thin solid var(--primary-color-text);
+  border-bottom: medium solid var(--primary-color-text);
 }
 .tic-tac-toe__bottom .tic-tac-toe__td--bottom:nth-child(1) {
-  border-right: thin solid var(--primary-color-text);
+  border-right: medium solid var(--primary-color-text);
 }
 .tic-tac-toe__bottom .tic-tac-toe__td--bottom:nth-child(2) {
-  border-right: thin solid var(--primary-color-text);
+  border-right: medium solid var(--primary-color-text);
 }
 .tic-tac-toe__bottom .tic-tac-toe__td--bottom:nth-child(3) {
-  border-left: thin solid var(--primary-color-text);
+  border-left: medium solid var(--primary-color-text);
+}
+
+@media screen and (min-width: 24em) {
+  .tic-tac-toe {
+    height: 35vh;
+  }
+}
+
+@media screen and (min-width: 33em) {
+  .tic-tac-toe {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 48em) {
+  .tic-tac-toe {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .tic-tac-toe {
+    width: 40%;
+    height: 40vh;
+  }
 }
