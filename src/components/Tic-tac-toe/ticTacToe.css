@@ -4,6 +4,7 @@
   border-collapse: collapse;
   border-spacing: none;
   font-size: 2.5rem;
+  cursor: pointer;
 }
 .tic-tac-toe__td--top,
 .tic-tac-toe__td--center,
@@ -63,6 +64,6 @@
 @media screen and (min-width: 75em) {
   .tic-tac-toe {
     width: 40%;
-    height: 40vh;
+    height: 50vh;
   }
 }
