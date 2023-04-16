@@ -5,4 +5,18 @@
 
 .social__link {
   cursor: pointer;
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+@media screen and (min-width: 75em) {
+  .social__link:hover {
+    transform: translateY(-0.25rem);
+    -webkit-transform: translateY(-0.25rem);
+    -moz-transform: translateY(-0.25rem);
+    -ms-transform: translateY(-0.25rem);
+    -o-transform: translateY(-0.25rem);
+  }
 }
