@@ -3,7 +3,12 @@
   margin: auto;
   padding: 0.2rem;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
-  justify-content: center;
+  flex-grow: 2;
   align-items: center;
+  justify-content: space-evenly;
+}
+.foo {
+  flex-grow: 0;
 }
