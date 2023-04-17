@@ -1,9 +1,10 @@
+import { cellsFormat } from "../../utils/cells";
 import "./ticTacToe.css";
 
 export default function TicTacToe({ cells, onAdd }) {
-  let top = cells.filter((e, index) => index < 3);
-  let center = cells.filter((e, index) => index >= 3 && index < 6);
-  let bottom = cells.filter((e, index) => index >= 6);
+  let top = cellsFormat(cells, (e, index) => index < 3);
+  let center = cellsFormat(cells, (e, index) => index >= 3 && index < 6);
+  let bottom = cellsFormat(cells, (e, index) => index >= 6);
   return (
     <table className="tic-tac-toe">
       <tbody>
@@ -12,8 +13,10 @@ export default function TicTacToe({ cells, onAdd }) {
             <td
               className="tic-tac-toe__td--top"
               key={index}
-              onPointerDown={() => onAdd("top", index)}>
-              {tic}
+              onPointerDown={
+                tic.letter.length !== 0 ? null : () => onAdd(tic.id)
+              }>
+              {tic.letter}
             </td>
           ))}
         </tr>
@@ -22,8 +25,10 @@ export default function TicTacToe({ cells, onAdd }) {
             <td
               className="tic-tac-toe__td--center"
               key={index}
-              onPointerDown={() => onAdd("center", index)}>
-              {tic}
+              onPointerDown={
+                tic.letter.length !== 0 ? null : () => onAdd(tic.id)
+              }>
+              {tic.letter}
             </td>
           ))}
         </tr>
@@ -32,8 +37,10 @@ export default function TicTacToe({ cells, onAdd }) {
             <td
               className="tic-tac-toe__td--bottom"
               key={index}
-              onPointerDown={() => onAdd("bottom", index)}>
-              {tic}
+              onPointerDown={
+                tic.letter.length !== 0 ? null : () => onAdd(tic.id)
+              }>
+              {tic.letter}
             </td>
           ))}
         </tr>
