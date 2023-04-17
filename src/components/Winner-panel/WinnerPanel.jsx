@@ -1,4 +1,4 @@
-import ButtonRestart from "../Button-restart/ButtonRestart";
+import ButtonRestart from "../button-restart/ButtonRestart";
 import "./winnerPanel.css";
 
 export default function WinnerPanel() {
