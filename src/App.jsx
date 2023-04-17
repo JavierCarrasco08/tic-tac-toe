@@ -7,22 +7,30 @@ import WinnerPanel from "./components/Winner-panel/WinnerPanel";
 import TicTacToe from "./components/Tic-tac-toe/TicTacToe";
 
 function App() {
-  const [top, setTop] = useState(["", "", ""]);
-  const [center, setCenter] = useState(["", "", ""]);
-  const [bottom, setBottom] = useState(["", "", ""]);
+  const [cells, setCells] = useState(["", "", "", "", "", "", "", "", ""]);
   const [turn, setTurn] = useState(true);
   function handleClickRestart() {
-    setTop(["", "", ""]);
-    setCenter(["", "", ""]);
-    setBottom(["", "", ""]);
+    setCells(["", "", "", "", "", "", "", "", ""]);
     setTurn(true);
+  }
+  function handleClickAdd(id) {
+    setCells(
+      cells.map((e, index) => {
+        if (index === id) {
+          return turn ? "⭕" : "❌";
+        } else {
+          return e;
+        }
+      })
+    );
+    setTurn(!turn);
   }
   return (
     <>
       <RestartContext.Provider value={handleClickRestart}>
         <main className="container">
           <ShiftPanel turn={turn ? "⭕" : "❌"} />
-          <TicTacToe top={top} center={center} bottom={bottom} />
+          <TicTacToe cells={cells} onAdd={handleClickAdd} />
         </main>
         <footer className="foo">
           <SocialMedia />
