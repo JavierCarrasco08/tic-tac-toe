@@ -10,16 +10,18 @@ function App() {
   const [top, setTop] = useState(["", "", ""]);
   const [center, setCenter] = useState(["", "", ""]);
   const [bottom, setBottom] = useState(["", "", ""]);
+  const [turn, setTurn] = useState(true);
   function handleClickRestart() {
     setTop(["", "", ""]);
     setCenter(["", "", ""]);
     setBottom(["", "", ""]);
+    setTurn(true);
   }
   return (
     <>
       <RestartContext.Provider value={handleClickRestart}>
         <main className="container">
-          <ShiftPanel />
+          <ShiftPanel turn={turn ? "⭕" : "❌"} />
           <TicTacToe top={top} center={center} bottom={bottom} />
         </main>
         <footer className="foo">
