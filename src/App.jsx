@@ -11,27 +11,21 @@ function App() {
   const [cells, setCells] = useState(["", "", "", "", "", "", "", "", ""]);
   const [turn, setTurn] = useState(true);
   const [win, setWin] = useState(null);
-  useEffect(() => {
-    let result = searchCells(cells, 0);
-    if (result) {
-      setWin(result);
-    }
-  }, [cells]);
   function handleClickRestart() {
     setCells(["", "", "", "", "", "", "", "", ""]);
     setTurn(true);
     setWin(null);
   }
   function handleClickAdd(id) {
-    setCells(
-      cells.map((e, index) => {
-        if (index === id) {
-          return turn ? "⭕" : "❌";
-        } else {
-          return e;
-        }
-      })
-    );
+    let newCells = cells.map((e, index) => {
+      if (index === id) {
+        return turn ? "⭕" : "❌";
+      } else {
+        return e;
+      }
+    });
+    setWin(searchCells(newCells, 0));
+    setCells(newCells);
     setTurn(!turn);
   }
   return (
